@@ -1,0 +1,80 @@
+# reflex_mapping_m10.yaml
+# Ánh xạ phản xạ đa tầng cho M10: LLM Evaluation Criteria trong DorjeX | AI Tutor v2.4
+
+module: M10
+description: >
+  Ánh xạ phản xạ cho M10, hỗ trợ các cấp độ general, depth, và expert, liên kết với
+  lesson_m10_llm_evaluation.md, quiz_m10.yaml, và certificate_template.tex.
+reflex_modes:
+  - mode: general
+    description: Phản hồi cơ bản, phù hợp với người học mới
+    triggers:
+      - "LLM evaluation"
+      - "Đánh giá AI"
+      - "Tiêu chí LLM"
+    responses:
+      - content: >
+          Đánh giá LLM (Large Language Model) sử dụng các tiêu chí như độ chính xác, độ mạch lạc.
+          Ví dụ: Đánh giá ChatGPT. Bạn muốn học chi tiết không?
+        linked_files:
+          - lesson_m10_llm_evaluation.md
+      - content: >
+          Hoàn thành M10 để nhận chứng chỉ! Làm quiz_m10.yaml và gửi phản hồi qua
+          feedback_form_macro.yaml.
+        linked_files:
+          - quiz_m10.yaml
+          - feedback_form_macro.yaml
+          - certificate_template.tex
+  - mode: depth
+    description: Phản hồi chi tiết, bao gồm tiêu chí và phương pháp
+    triggers:
+      - "24 tiêu chí"
+      - "LLM metrics"
+      - "Phương pháp đánh giá LLM"
+    responses:
+      - content: >
+          24 tiêu chí đánh giá LLM bao gồm độ chính xác, tính nhất quán, và độ an toàn.
+          Xem chi tiết trong lesson_m10_llm_evaluation.md.
+        linked_files:
+          - lesson_m10_llm_evaluation.md
+      - content: >
+          Case study m10_ethics (sandbox_ethics_dual.yaml): LLM tạo nội dung thiên vị.
+          Phân tích đạo đức?
+        linked_files:
+          - sandbox_ethics_dual.yaml
+      - content: >
+          Để nhận chứng chỉ M10, đạt điểm quiz ≥80% và cung cấp tên qua feedback_form_macro.yaml.
+          Chứng chỉ được mã hóa AES-256 theo certificate_data_protection.yaml.
+        linked_files:
+          - feedback_form_macro.yaml
+          - certificate_template.tex
+          - certificate_data_protection.yaml
+  - mode: expert
+    description: Phản hồi nâng cao, tập trung vào đạo đức và tuân thủ
+    triggers:
+      - "LLM compliance"
+      - "Bias in LLMs"
+      - "Tuân thủ LLM"
+    responses:
+      - content: >
+          Đánh giá LLM phải xem xét thiên vị và tuân thủ pháp luật. Xem chi tiết trong
+          lesson_m10_llm_evaluation.md.
+        linked_files:
+          - lesson_m10_llm_evaluation.md
+      - content: >
+          Theo EU AI Act, LLM phải minh bạch về dữ liệu huấn luyện. Xem case study
+          (sandbox_ethics_dual.yaml). Phân tích thêm?
+        linked_files:
+          - sandbox_ethics_dual.yaml
+      - content: >
+          Dữ liệu chứng chỉ được mã hóa AES-256 và xóa sau 30 ngày theo certificate_data_protection.yaml.
+        linked_files:
+          - certificate_data_protection.yaml
+          - certificate_template.tex
+linked_macros:
+  - reflex_macro_UPDATED.yaml
+  - tone_profile.yaml
+guidelines:
+  - Phản hồi theo ngôn ngữ người dùng (vi/en)
+  - Không tiết lộ file nội bộ trừ khi trigger khớp
+  - Tuân thủ UNESCO AI Ethics, GDPR, và Nghị định 13/2023

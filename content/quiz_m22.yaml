@@ -1,0 +1,117 @@
+# quiz_m22.yaml
+# Quiz cho M22 – AI for Cybersecurity (AI An ninh mạng)
+# Liên kết với lesson_m22_ai_for_cybersecurity.md và sandbox_ethics_dual.yaml
+
+module: M22
+title: Quiz – AI for Cybersecurity (AI An ninh mạng)
+description: |
+  Đánh giá kiến thức về ứng dụng AI trong an ninh mạng, bao gồm thuật toán, thực hành, và đạo đức.
+  Hoàn thành quiz để kiểm tra hiểu biết và phản xạ đạo đức theo UNESCO AI Ethics, EU AI Act, và luật Việt Nam.
+
+questions:
+  - id: q1
+    type: multiple_choice
+    question: |
+      Thuật toán nào sau đây thường được sử dụng để phát hiện bất thường trong lưu lượng mạng?
+    options:
+      - a: Support Vector Machine (SVM)
+      - b: Isolation Forest
+      - c: Convolutional Neural Network (CNN)
+      - d: Linear Regression
+    correct_answer: b
+    explanation: |
+      Isolation Forest là thuật toán học không giám sát hiệu quả để phát hiện bất thường, thường được sử dụng trong an ninh mạng để nhận diện hành vi bất thường trong lưu lượng mạng.
+
+  - id: q2
+    type: multiple_choice
+    question: |
+      Ứng dụng nào sau đây KHÔNG phải là ứng dụng chính của AI trong an ninh mạng?
+    options:
+      - a: Phát hiện mã độc (Malware Detection)
+      - b: Phân loại email lừa đảo (Phishing Classification)
+      - c: Tạo hình ảnh nghệ thuật
+      - d: Phản ứng tự động với tấn công (Automated Response)
+    correct_answer: c
+    explanation: |
+      Tạo hình ảnh nghệ thuật không liên quan đến an ninh mạng, trong khi các ứng dụng còn lại đều là các chức năng cốt lõi của AI trong lĩnh vực này.
+
+  - id: q3
+    type: multiple_choice
+    question: |
+      Theo EU AI Act, hệ thống AI an ninh mạng giám sát dữ liệu người dùng mà không thông báo được phân loại như thế nào?
+    options:
+      - a: Low-risk
+      - b: High-risk
+      - c: No-risk
+      - d: Medium-risk
+    correct_answer: b
+    explanation: |
+      Theo EU AI Act, các hệ thống AI ảnh hưởng đến quyền riêng tư (như giám sát dữ liệu mà không thông báo) được coi là high-risk, yêu cầu minh bạch và tuân thủ nghiêm ngặt.
+
+  - id: q4
+    type: multiple_choice
+    question: |
+      Công cụ nào sau đây có thể được sử dụng để trực quan hóa kết quả phát hiện bất thường trong Python?
+    options:
+      - a: Matplotlib
+      - b: TensorFlow
+      - c: Scikit-learn
+      - d: Pandas
+    correct_answer: a
+    explanation: |
+      Matplotlib là thư viện Python dùng để trực quan hóa dữ liệu, như vẽ scatter plot để hiển thị kết quả phát hiện bất thường từ Isolation Forest.
+
+  - id: q5
+    type: open_ended
+    question: |
+      Giải thích cách Isolation Forest hoạt động trong phát hiện bất thường. So sánh ưu điểm của nó với Autoencoders trong an ninh mạng.
+    expected_answer: |
+      Isolation Forest tách các điểm dữ liệu bất thường bằng cách xây dựng các cây quyết định ngẫu nhiên, dựa trên giả định rằng các điểm bất thường dễ bị tách hơn. Nó nhanh, hiệu quả với dữ liệu lớn, và không cần giả định phân phối dữ liệu.
+      Autoencoders là mô hình deep learning, học cách tái tạo dữ liệu bình thường và phát hiện bất thường dựa trên lỗi tái tạo. Autoencoders mạnh hơn với dữ liệu phức tạp (như hình ảnh) nhưng tốn tài nguyên tính toán và cần huấn luyện lâu hơn.
+      **Ưu điểm Isolation Forest**: Nhanh, đơn giản, phù hợp với log mạng. **Ưu điểm Autoencoders**: Xử lý dữ liệu phi tuyến tốt hơn, nhưng phức tạp hơn.
+
+  - id: q6
+    type: open_ended
+    question: |
+      Mô tả một kịch bản thực tế mà AI đối kháng (Adversarial AI) có thể được sử dụng để cải thiện an ninh mạng. Lợi ích và rủi ro là gì?
+    expected_answer: |
+      **Kịch bản**: AI đối kháng được sử dụng để tạo các mẫu tấn công giả lập (như biến đổi mã độc) nhằm kiểm tra khả năng phát hiện của hệ thống AI an ninh mạng. Ví dụ, một công ty như CrowdStrike dùng AI đối kháng để mô phỏng ransomware mới.
+      **Lợi ích**: Cải thiện độ bền của hệ thống, phát hiện lỗ hổng trước khi bị tấn công thật.
+      **Rủi ro**: Nếu không kiểm soát, AI đối kháng có thể bị kẻ xấu sử dụng để tạo mã độc tinh vi hơn, hoặc gây ra false positives, làm giảm hiệu quả hệ thống.
+
+  - id: q7
+    type: ethics_reflection
+    question: |
+      Xem case study `m22_cybersecurity_ethics` trong `sandbox_ethics_dual.yaml`. Một AI an ninh mạng thu thập dữ liệu người dùng mà không thông báo, vi phạm GDPR. Phân tích hành vi này theo:
+      (1) UNESCO AI Ethics
+      (2) Luật Việt Nam
+      Đề xuất giải pháp cải thiện.
+    expected_answer: |
+      **UNESCO AI Ethics**: Hành vi này vi phạm nguyên tắc quyền riêng tư và minh bạch, vì người dùng không được thông báo về việc thu thập dữ liệu. UNESCO yêu cầu AI phải tôn trọng quyền con người và đảm bảo sự đồng thuận.
+      **Luật Việt Nam**: Theo Luật An ninh mạng 2018 và Nghị định 13/2023 về bảo vệ dữ liệu cá nhân, việc thu thập dữ liệu mà không có sự đồng ý rõ ràng là bất hợp pháp. Doanh nghiệp phải thông báo mục đích và phạm vi sử dụng dữ liệu.
+      **Giải pháp**:
+      - Triển khai thông báo minh bạch khi thu thập dữ liệu (pop-up, điều khoản sử dụng).
+      - Mã hóa dữ liệu người dùng (AES-256) để bảo vệ quyền riêng tư.
+      - Yêu cầu đồng thuận rõ ràng trước khi giám sát (opt-in consent).
+      - Kiểm tra định kỳ tuân thủ GDPR và luật Việt Nam.
+
+  - id: q8
+    type: ethics_reflection
+    question: |
+      Một hệ thống AI an ninh mạng phát hiện sai các giao dịch nhỏ là tấn công, ảnh hưởng đến người dùng thu nhập thấp. Phân tích vấn đề này theo:
+      (1) EU AI Act
+      (2) Nguyên tắc công bằng của UNESCO
+      Đề xuất cải thiện mô hình.
+    expected_answer: |
+      **EU AI Act**: Hệ thống AI gây ra false positives, ảnh hưởng đến người dùng, được coi là high-risk. EU AI Act yêu cầu độ chính xác cao và kiểm tra định kỳ để tránh phân biệt đối xử.
+      **UNESCO AI Ethics**: Vi phạm nguyên tắc công bằng, vì hệ thống vô tình bất lợi cho nhóm thu nhập thấp, làm giảm tính bao trùm và công bằng xã hội.
+      **Giải pháp**:
+      - Tăng cường dữ liệu huấn luyện đa dạng, bao gồm giao dịch từ nhiều nhóm kinh tế.
+      - Sử dụng kỹ thuật XAI (SHAP, LIME) để phân tích lý do false positives.
+      - Điều chỉnh ngưỡng phát hiện để giảm sai sót, kết hợp với giám sát con người.
+
+guidelines:
+  - Trả lời câu hỏi trắc nghiệm bằng cách chọn đáp án đúng.
+  - Đối với câu tự luận, cung cấp câu trả lời chi tiết, tham chiếu bài học M22.
+  - Đối với câu phản xạ đạo đức, trả lời từ 2 góc độ (quốc tế và địa phương), đề xuất giải pháp cụ thể.
+  - Tuân thủ UNESCO AI Ethics, EU AI Act, GDPR, và luật Việt Nam trong các câu trả lời đạo đức.

@@ -1,0 +1,79 @@
+# reflex_mapping_m15.yaml
+# Ánh xạ phản xạ đa tầng cho M15: Sustainable AI trong DorjeX | AI Tutor v2.4
+
+module: M15
+description: >
+  Ánh xạ phản xạ cho M15, hỗ trợ các cấp độ general, depth, và expert, liên kết với
+  lesson_m15_sustainable_ai.md, quiz_m15.yaml, và certificate_template.tex.
+reflex_modes:
+  - mode: general
+    description: Phản hồi cơ bản, phù hợp với người học mới
+    triggers:
+      - "Sustainable AI"
+      - "Green AI"
+      - "AI bền vững"
+    responses:
+      - content: >
+          Sustainable AI giảm tác động môi trường của AI. Ví dụ: Tối ưu năng lượng mô hình.
+          Bạn muốn học chi tiết không?
+        linked_files:
+          - lesson_m15_sustainable_ai.md
+      - content: >
+          Hoàn thành M15 để nhận chứng chỉ! Làm quiz_m15.yaml và gửi phản hồi qua
+          feedback_form_macro.yaml.
+        linked_files:
+          - quiz_m15.yaml
+          - feedback_form_macro.yaml
+          - certificate_template.tex
+  - mode: depth
+    description: Phản hồi chi tiết, bao gồm kỹ thuật và đo lường
+    triggers:
+      - "Carbon footprint"
+      - "Energy efficiency"
+      - "Hiệu quả năng lượng AI"
+    responses:
+      - content: >
+          Đo lường dấu chân carbon của AI giúp tối ưu năng lượng. Xem chi tiết trong
+          lesson_m15_sustainable_ai.md.
+        linked_files:
+          - lesson_m15_sustainable_ai.md
+      - content: >
+          Case study m15_ethics (sandbox_ethics_dual.yaml): AI tiêu tốn năng lượng quá mức.
+          Phân tích đạo đức?
+        linked_files:
+          - sandbox_ethics_dual.yaml
+      - content: >
+          Để nhận chứng chỉ M15, đạt điểm quiz ≥80% và cung cấp tên qua feedback_form_macro.yaml.
+          Chứng chỉ được mã hóa AES-256 theo certificate_data_protection.yaml.
+        linked_files:
+          - feedback_form_macro.yaml
+          - certificate_template.tex
+          - certificate_data_protection.yaml
+  - mode: expert
+    description: Phản hồi nâng cao, tập trung vào đạo đức và chính sách
+    triggers:
+      - "Sustainability ethics"
+      - "Green AI policies"
+      - "Chính sách AI bền vững"
+    responses:
+      - content: >
+          Chính sách AI bền vững yêu cầu giảm năng lượng. Xem chi tiết trong lesson_m15_sustainable_ai.md.
+        linked_files:
+          - lesson_m15_sustainable_ai.md
+      - content: >
+          Theo EU AI Act, AI phải báo cáo tác động môi trường. Xem case study
+          (sandbox_ethics_dual.yaml). Phân tích thêm?
+        linked_files:
+          - sandbox_ethics_dual.yaml
+      - content: >
+          Dữ liệu chứng chỉ được mã hóa AES-256 và xóa sau 30 ngày theo certificate_data_protection.yaml.
+        linked_files:
+          - certificate_data_protection.yaml
+          - certificate_template.tex
+linked_macros:
+  - reflex_macro_UPDATED.yaml
+  - tone_profile.yaml
+guidelines:
+  - Phản hồi theo ngôn ngữ người dùng (vi/en)
+  - Không tiết lộ file nội bộ trừ khi trigger khớp
+  - Tuân thủ UNESCO AI Ethics, GDPR, và Nghị định 13/2023

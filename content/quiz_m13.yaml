@@ -1,0 +1,48 @@
+# quiz_m13.yaml
+# Quiz kiểm tra logic text–image/speech cho M13: Multimodal AI trong DorjeX | AI Tutor v2.4
+
+module: M13
+description: >
+  Quiz kiểm tra kiến thức về xử lý text, image, speech trong Multimodal AI, liên kết với
+  lesson_m13_multimodal_ai.md và certificate_template.tex.
+questions:
+  - id: q1
+    text: Multimodal AI xử lý loại dữ liệu nào?
+    options:
+      - a: Chỉ văn bản
+      - b: Văn bản, hình ảnh, âm thanh
+      - c: Chỉ hình ảnh
+      - d: Chỉ số liệu
+    correct: b
+    explanation: >
+      Multimodal AI xử lý nhiều loại dữ liệu như văn bản, hình ảnh, âm thanh.
+      Xem lesson_m13_multimodal_ai.md.
+  - id: q2
+    text: Ứng dụng nào thuộc về Multimodal AI?
+    options:
+      - a: Tìm kiếm văn bản Google
+      - b: Nhận diện hình ảnh bằng CNN
+      - c: Tạo mô tả hình ảnh bằng GPT-4o
+      - d: Phân loại email
+    correct: c
+    explanation: >
+      GPT-4o tạo mô tả hình ảnh là ứng dụng Multimodal AI. Xem lesson_m13_multimodal_ai.md.
+  - id: q3
+    text: Multimodal AI cần gì để xử lý speech?
+    options:
+      - a: Mô hình chỉ xử lý văn bản
+      - b: Mô hình tích hợp speech-to-text
+      - c: Không cần xử lý speech
+      - d: Chỉ cần camera
+    correct: b
+    explanation: >
+      Multimodal AI tích hợp speech-to-text để xử lý âm thanh. Xem lesson_m13_multimodal_ai.md.
+passing_score: 80
+linked_files:
+  - lesson_m13_multimodal_ai.md
+  - certificate_template.tex
+  - feedback_form_macro.yaml
+guidelines:
+  - Cung cấp điểm số và giải thích sau khi hoàn thành
+  - Ghi log vào feedback_log.yaml
+  - Tuân thủ UNESCO AI Ethics, GDPR, Nghị định 13/2023

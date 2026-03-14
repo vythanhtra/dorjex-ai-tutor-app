@@ -1,0 +1,79 @@
+# reflex_mapping_m9.yaml
+# Ánh xạ phản xạ đa tầng cho M9: Ethics Sandbox & CoT trong DorjeX | AI Tutor v2.4
+
+module: M9
+description: >
+  Ánh xạ phản xạ cho M9, hỗ trợ các cấp độ general, depth, và expert, liên kết với
+  lesson_m9_ethics_sandbox.md, quiz_m9.yaml, và certificate_template.tex.
+reflex_modes:
+  - mode: general
+    description: Phản hồi cơ bản, phù hợp với người học mới
+    triggers:
+      - "Ethics sandbox"
+      - "Đạo đức AI"
+      - "CoT ethics"
+    responses:
+      - content: >
+          Ethics Sandbox kiểm tra đạo đức AI qua kịch bản giả lập. Ví dụ: AI đưa ra quyết định y tế.
+          Bạn muốn học chi tiết không?
+        linked_files:
+          - lesson_m9_ethics_sandbox.md
+      - content: >
+          Hoàn thành M9 để nhận chứng chỉ! Làm quiz_m9.yaml và gửi phản hồi qua
+          feedback_form_macro.yaml.
+        linked_files:
+          - quiz_m9.yaml
+          - feedback_form_macro.yaml
+          - certificate_template.tex
+  - mode: depth
+    description: Phản hồi chi tiết, bao gồm kỹ thuật và phân tích
+    triggers:
+      - "CoT ethics"
+      - "Ethical reasoning"
+      - "Suy luận đạo đức"
+    responses:
+      - content: >
+          Chain of Thought (CoT) trong đạo đức giúp AI suy luận minh bạch. Xem ví dụ trong
+          lesson_m9_ethics_sandbox.md.
+        linked_files:
+          - lesson_m9_ethics_sandbox.md
+      - content: >
+          Case study m9_ethics (sandbox_ethics_dual.yaml): AI từ chối trả lời do rủi ro đạo đức.
+          Phân tích thêm?
+        linked_files:
+          - sandbox_ethics_dual.yaml
+      - content: >
+          Để nhận chứng chỉ M9, đạt điểm quiz ≥80% và cung cấp tên qua feedback_form_macro.yaml.
+          Chứng chỉ được mã hóa AES-256 theo certificate_data_protection.yaml.
+        linked_files:
+          - feedback_form_macro.yaml
+          - certificate_template.tex
+          - certificate_data_protection.yaml
+  - mode: expert
+    description: Phản hồi nâng cao, tập trung vào đạo đức toàn cầu
+    triggers:
+      - "UNESCO ethics"
+      - "Global AI ethics"
+      - "Đạo đức AI toàn cầu"
+    responses:
+      - content: >
+          UNESCO AI Ethics yêu cầu minh bạch và công bằng. Xem chi tiết trong lesson_m9_ethics_sandbox.md.
+        linked_files:
+          - lesson_m9_ethics_sandbox.md
+      - content: >
+          Theo EU AI Act, AI đạo đức phải tuân thủ kiểm tra định kỳ. Xem case study
+          (sandbox_ethics_dual.yaml). Phân tích thêm?
+        linked_files:
+          - sandbox_ethics_dual.yaml
+      - content: >
+          Dữ liệu chứng chỉ được mã hóa AES-256 và xóa sau 30 ngày theo certificate_data_protection.yaml.
+        linked_files:
+          - certificate_data_protection.yaml
+          - certificate_template.tex
+linked_macros:
+  - reflex_macro_UPDATED.yaml
+  - tone_profile.yaml
+guidelines:
+  - Phản hồi theo ngôn ngữ người dùng (vi/en)
+  - Không tiết lộ file nội bộ trừ khi trigger khớp
+  - Tuân thủ UNESCO AI Ethics, GDPR, và Nghị định 13/2023

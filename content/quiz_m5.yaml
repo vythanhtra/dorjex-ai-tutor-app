@@ -1,0 +1,48 @@
+# quiz_m5.yaml
+# Quiz kiểm tra CoT/ReAct/ToT logic cho M5: Prompt nâng cao trong DorjeX | AI Tutor v2.4
+
+module: M5
+description: >
+  Quiz kiểm tra kỹ thuật CoT, ReAct, ToT trong prompt nâng cao, liên kết với
+  lesson_m5_advanced_prompting.md và certificate_template.tex.
+questions:
+  - id: q1
+    text: CoT (Chain of Thought) có mục đích gì?
+    options:
+      - a: Tạo câu trả lời ngẫu nhiên
+      - b: Hướng dẫn AI suy luận từng bước
+      - c: Giảm độ chính xác của AI
+      - d: Chỉ dùng cho hình ảnh
+    correct: b
+    explanation: >
+      CoT hướng dẫn AI suy luận từng bước để tăng độ chính xác. Xem lesson_m5_advanced_prompting.md.
+  - id: q2
+    text: ReAct (Reasoning and Acting) phù hợp nhất cho nhiệm vụ nào?
+    options:
+      - a: Tạo hình ảnh
+      - b: Tương tác với môi trường
+      - c: Phân loại văn bản
+      - d: Dự đoán giá cổ phiếu
+    correct: b
+    explanation: >
+      ReAct kết hợp suy luận và hành động, phù hợp cho môi trường tương tác.
+      Xem lesson_m5_advanced_prompting.md.
+  - id: q3
+    text: ToT (Tree of Thoughts) khác CoT như thế nào?
+    options:
+      - a: ToT khám phá nhiều nhánh suy luận
+      - b: ToT chỉ dùng một bước
+      - c: ToT không cần prompt
+      - d: ToT chỉ cho văn bản
+    correct: a
+    explanation: >
+      ToT khám phá nhiều nhánh suy luận, trong khi CoT là tuyến tính. Xem lesson_m5_advanced_prompting.md.
+passing_score: 80
+linked_files:
+  - lesson_m5_advanced_prompting.md
+  - certificate_template.tex
+  - feedback_form_macro.yaml
+guidelines:
+  - Cung cấp điểm số và giải thích sau khi hoàn thành
+  - Ghi log vào feedback_log.yaml
+  - Tuân thủ UNESCO AI Ethics, GDPR, Nghị định 13/2023

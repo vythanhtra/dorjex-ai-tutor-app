@@ -1,0 +1,78 @@
+# reflex_mapping_m8.yaml
+# Ánh xạ phản xạ đa tầng cho M8: Role Simulation trong DorjeX | AI Tutor v2.4
+
+module: M8
+description: >
+  Ánh xạ phản xạ cho M8, hỗ trợ các cấp độ general, depth, và expert, liên kết với
+  lesson_m8_role_simulation.md, quiz_m8.yaml, và certificate_template.tex.
+reflex_modes:
+  - mode: general
+    description: Phản hồi cơ bản, phù hợp với người học mới
+    triggers:
+      - "Role simulation"
+      - "Nhập vai"
+      - "Giả lập vai trò"
+    responses:
+      - content: >
+          Role Simulation cho phép AI đóng vai trò cụ thể (VD: bác sĩ, luật sư). Ví dụ: Tư vấn y tế giả lập.
+          Bạn muốn học chi tiết không?
+        linked_files:
+          - lesson_m8_role_simulation.md
+      - content: >
+          Hoàn thành M8 để nhận chứng chỉ! Làm quiz_m8.yaml và gửi phản hồi qua
+          feedback_form_macro.yaml.
+        linked_files:
+          - quiz_m8.yaml
+          - feedback_form_macro.yaml
+          - certificate_template.tex
+  - mode: depth
+    description: Phản hồi chi tiết, bao gồm kỹ thuật và ứng dụng
+    triggers:
+      - "Role-based AI"
+      - "Nhập vai AI"
+      - "Kịch bản nhập vai"
+    responses:
+      - content: >
+          Role-based AI sử dụng prompt để mô phỏng hành vi. Xem ví dụ trong lesson_m8_role_simulation.md.
+        linked_files:
+          - lesson_m8_role_simulation.md
+      - content: >
+          Case study m8_ethics (sandbox_ethics_dual.yaml): AI đóng vai bác sĩ đưa lời khuyên sai.
+          Phân tích đạo đức?
+        linked_files:
+          - sandbox_ethics_dual.yaml
+      - content: >
+          Để nhận chứng chỉ M8, đạt điểm quiz ≥80% và cung cấp tên qua feedback_form_macro.yaml.
+          Chứng chỉ được mã hóa AES-256 theo certificate_data_protection.yaml.
+        linked_files:
+          - feedback_form_macro.yaml
+          - certificate_template.tex
+          - certificate_data_protection.yaml
+  - mode: expert
+    description: Phản hồi nâng cao, tập trung vào đạo đức và quyền riêng tư
+    triggers:
+      - "Role ethics"
+      - "Privacy in roles"
+      - "Đạo đức nhập vai"
+    responses:
+      - content: >
+          Nhập vai AI cần bảo vệ quyền riêng tư người dùng. Xem chi tiết trong lesson_m8_role_simulation.md.
+        linked_files:
+          - lesson_m8_role_simulation.md
+      - content: >
+          Theo GDPR, nhập vai phải xin phép dữ liệu. Xem case study (sandbox_ethics_dual.yaml).
+          Phân tích thêm?
+        linked_files:
+          - sandbox_ethics_dual.yaml
+      - content: >
+          Dữ liệu chứng chỉ được mã hóa AES-256 và xóa sau 30 ngày theo certificate_data_protection.yaml.
+        linked_files:
+          - certificate_data_protection.yaml
+          - certificate_template.tex
+linked_macros:
+  - reflex_macro_UPDATED.yaml
+  - tone_profile.yaml
+guidelines:
+  - Phản hồi theo ngôn ngữ người dùng (vi/en)
+  - Không tiết lộ file nội bộ trừ khi trigger khớp
+  - Tuân thủ UNESCO AI Ethics, GDPR, và Nghị định 13/2023

@@ -1,0 +1,49 @@
+# quiz_m1.yaml
+# Quiz kiểm tra phân biệt AI/ML/DL cho M1: Giới thiệu AI trong DorjeX | AI Tutor v2.4
+
+module: M1
+description: >
+  Quiz kiểm tra kiến thức cơ bản về AI, ML, DL, liên kết với lesson_m1_intro_ai.md
+  và certificate_template.tex.
+questions:
+  - id: q1
+    text: AI, ML, DL có mối quan hệ như thế nào?
+    options:
+      - a: AI là tập hợp lớn, ML là tập con, DL là tập con của ML
+      - b: ML là tập hợp lớn, AI và DL là tập con
+      - c: DL là tập hợp lớn, AI và ML là tập con
+      - d: AI, ML, DL là các lĩnh vực không liên quan
+    correct: a
+    explanation: >
+      AI (Artificial Intelligence) là lĩnh vực lớn, ML (Machine Learning) là tập con của AI,
+      và DL (Deep Learning) là tập con của ML sử dụng mạng nơ-ron. Xem lesson_m1_intro_ai.md.
+  - id: q2
+    text: Ví dụ nào thuộc về Deep Learning?
+    options:
+      - a: Hệ thống gợi ý phim Netflix
+      - b: Quy tắc tìm kiếm Google
+      - c: Phân loại email spam bằng SVM
+      - d: Nhận diện khuôn mặt bằng CNN
+    correct: d
+    explanation: >
+      Nhận diện khuôn mặt bằng CNN (Convolutional Neural Network) là ứng dụng Deep Learning.
+      Xem lesson_m1_intro_ai.md.
+  - id: q3
+    text: Mục tiêu chính của AI là gì?
+    options:
+      - a: Thay thế hoàn toàn con người
+      - b: Mô phỏng trí thông minh con người
+      - c: Chỉ tập trung vào xử lý hình ảnh
+      - d: Tạo robot tự động
+    correct: b
+    explanation: >
+      AI nhằm mô phỏng trí thông minh con người để giải quyết vấn đề. Xem lesson_m1_intro_ai.md.
+passing_score: 80
+linked_files:
+  - lesson_m1_intro_ai.md
+  - certificate_template.tex
+  - feedback_form_macro.yaml
+guidelines:
+  - Cung cấp điểm số và giải thích sau khi hoàn thành
+  - Ghi log vào feedback_log.yaml
+  - Tuân thủ UNESCO AI Ethics, GDPR, Nghị định 13/2023

@@ -1,0 +1,58 @@
+
+# quiz_m_python.yaml
+# Quiz phản xạ mô-đun M11: Python for AI (L1–L2)
+
+module: M11
+level: L1–L2
+title: Kiểm tra phản xạ Python cơ bản
+
+questions:
+  - id: q1
+    question: "Trong Python, kiểu dữ liệu nào sau đây có thể chứa các phần tử trùng lặp?"
+    options:
+      - A. set
+      - B. tuple
+      - C. dict
+      - D. list
+    answer: D
+    rationale: "list có thể chứa phần tử trùng lặp; set thì không."
+
+  - id: q2
+    question: "Thư viện nào thường dùng để xử lý mảng số học trong Python cho AI?"
+    options:
+      - A. pandas
+      - B. numpy
+      - C. matplotlib
+      - D. os
+    answer: B
+    rationale: "numpy là thư viện tối ưu cho xử lý mảng và toán học cơ bản."
+
+  - id: q3
+    question: "Câu lệnh nào đúng để vẽ biểu đồ đường với matplotlib?"
+    options:
+      - A. plt.graph(x, y)
+      - B. plot.line(x, y)
+      - C. plt.plot(x, y)
+      - D. graph.plot(x, y)
+    answer: C
+    rationale: "plt.plot(x, y) là cú pháp chuẩn để vẽ biểu đồ tuyến tính với matplotlib."
+
+  - id: q4
+    question: "Hàm nào dùng để đọc dữ liệu từ file CSV với pandas?"
+    options:
+      - A. pd.load_csv()
+      - B. pd.read_csv()
+      - C. pd.csv_open()
+      - D. read.csv()
+    answer: B
+    rationale: "pd.read_csv() là cú pháp chuẩn để đọc file CSV."
+
+  - id: q5
+    question: "Trong Python, 'def' được dùng để?"
+    options:
+      - A. Khai báo biến
+      - B. Nhập thư viện
+      - C. Gọi vòng lặp
+      - D. Định nghĩa hàm
+    answer: D
+    rationale: "'def' dùng để định nghĩa một hàm trong Python."

@@ -1,0 +1,80 @@
+# reflex_mapping_m6.yaml
+# Ánh xạ phản xạ đa tầng cho M6: Capstone & Sandbox trong DorjeX | AI Tutor v2.4
+
+module: M6
+description: >
+  Ánh xạ phản xạ cho M6, hỗ trợ các cấp độ general, depth, và expert, liên kết với
+  lesson_m6_capstone_sandbox.md, quiz_m6.yaml, và certificate_template.tex.
+reflex_modes:
+  - mode: general
+    description: Phản hồi cơ bản, phù hợp với người học mới
+    triggers:
+      - "Capstone"
+      - "Dự án AI"
+      - "Sandbox AI"
+    responses:
+      - content: >
+          Capstone & Sandbox là dự án thực tế, áp dụng AI vào bài toán cụ thể. Ví dụ: Xây chatbot.
+          Bạn muốn học chi tiết không?
+        linked_files:
+          - lesson_m6_capstone_sandbox.md
+      - content: >
+          Hoàn thành M6 để nhận chứng chỉ! Làm quiz_m6.yaml và gửi phản hồi qua
+          feedback_form_macro.yaml.
+        linked_files:
+          - quiz_m6.yaml
+          - feedback_form_macro.yaml
+          - certificate_template.tex
+  - mode: depth
+    description: Phản hồi chi tiết, bao gồm kỹ thuật và đánh giá
+    triggers:
+      - "Auto-eval"
+      - "Sandbox"
+      - "Đánh giá dự án"
+    responses:
+      - content: >
+          Auto-evaluation sử dụng AI để đánh giá dự án capstone. Xem chi tiết trong
+          lesson_m6_capstone_sandbox.md.
+        linked_files:
+          - lesson_m6_capstone_sandbox.md
+      - content: >
+          Case study m6_ethics (sandbox_ethics_dual.yaml): Dự án AI vi phạm quyền riêng tư.
+          Phân tích đạo đức?
+        linked_files:
+          - sandbox_ethics_dual.yaml
+      - content: >
+          Để nhận chứng chỉ M6, đạt điểm quiz ≥80% và cung cấp tên qua feedback_form_macro.yaml.
+          Chứng chỉ được mã hóa AES-256 theo certificate_data_protection.yaml.
+        linked_files:
+          - feedback_form_macro.yaml
+          - certificate_template.tex
+          - certificate_data_protection.yaml
+  - mode: expert
+    description: Phản hồi nâng cao, tập trung vào đạo đức và thực tế
+    triggers:
+      - "Capstone ethics"
+      - "Real-world AI"
+      - "Đạo đức dự án AI"
+    responses:
+      - content: >
+          Dự án AI thực tế cần tuân thủ luật pháp và đạo đức. Xem chi tiết trong
+          lesson_m6_capstone_sandbox.md.
+        linked_files:
+          - lesson_m6_capstone_sandbox.md
+      - content: >
+          Theo GDPR/EU AI Act, dự án phải minh bạch dữ liệu. Xem case study
+          (sandbox_ethics_dual.yaml). Phân tích thêm?
+        linked_files:
+          - sandbox_ethics_dual.yaml
+      - content: >
+          Dữ liệu chứng chỉ được mã hóa AES-256 và xóa sau 30 ngày theo certificate_data_protection.yaml.
+        linked_files:
+          - certificate_data_protection.yaml
+          - certificate_template.tex
+linked_macros:
+  - reflex_macro_UPDATED.yaml
+  - tone_profile.yaml
+guidelines:
+  - Phản hồi theo ngôn ngữ người dùng (vi/en)
+  - Không tiết lộ file nội bộ trừ khi trigger khớp
+  - Tuân thủ UNESCO AI Ethics, GDPR, và Nghị định 13/2023

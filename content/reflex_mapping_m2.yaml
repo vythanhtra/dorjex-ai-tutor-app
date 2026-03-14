@@ -1,0 +1,79 @@
+# reflex_mapping_m2.yaml
+# Ánh xạ phản xạ đa tầng cho M2: Machine Learning trong DorjeX | AI Tutor v2.4
+
+module: M2
+description: >
+  Ánh xạ phản xạ cho M2, hỗ trợ các cấp độ general, depth, và expert, liên kết với
+  lesson_m2_machine_learning.md, quiz_m2.yaml, và certificate_template.tex.
+reflex_modes:
+  - mode: general
+    description: Phản hồi cơ bản, phù hợp với người học mới
+    triggers:
+      - "Machine learning"
+      - "Máy học"
+      - "ML là gì"
+    responses:
+      - content: >
+          Machine Learning (ML) là AI cho phép máy học từ dữ liệu. Ví dụ: Dự đoán giá nhà.
+          Bạn muốn học chi tiết không?
+        linked_files:
+          - lesson_m2_machine_learning.md
+      - content: >
+          Hoàn thành M2 để nhận chứng chỉ! Làm quiz_m2.yaml và gửi phản hồi qua
+          feedback_form_macro.yaml.
+        linked_files:
+          - quiz_m2.yaml
+          - feedback_form_macro.yaml
+          - certificate_template.tex
+  - mode: depth
+    description: Phản hồi chi tiết, bao gồm thuật toán và code
+    triggers:
+      - "SVM"
+      - "K-means"
+      - "Thuật toán ML"
+    responses:
+      - content: >
+          SVM (Support Vector Machine) tìm siêu phẳng tối ưu để phân loại dữ liệu.
+          Xem code Python trong lesson_m2_machine_learning.md.
+        linked_files:
+          - lesson_m2_machine_learning.md
+      - content: >
+          Case study m2_bias (sandbox_ethics_dual.yaml): ML dự đoán tín dụng thiên vị.
+          Phân tích đạo đức?
+        linked_files:
+          - sandbox_ethics_dual.yaml
+      - content: >
+          Để nhận chứng chỉ M2, đạt điểm quiz ≥80% và cung cấp tên qua feedback_form_macro.yaml.
+          Chứng chỉ được mã hóa AES-256 theo certificate_data_protection.yaml.
+        linked_files:
+          - feedback_form_macro.yaml
+          - certificate_template.tex
+          - certificate_data_protection.yaml
+  - mode: expert
+    description: Phản hồi nâng cao, tập trung vào đạo đức và xu hướng
+    triggers:
+      - "Bias in ML"
+      - "ML ethics"
+      - "Công bằng ML"
+    responses:
+      - content: >
+          Thiên vị trong ML có thể gây bất công. Xem chi tiết trong lesson_m2_machine_learning.md.
+        linked_files:
+          - lesson_m2_machine_learning.md
+      - content: >
+          Theo EU AI Act, ML phải đảm bảo công bằng. Xem case study (sandbox_ethics_dual.yaml).
+          Phân tích thêm?
+        linked_files:
+          - sandbox_ethics_dual.yaml
+      - content: >
+          Dữ liệu chứng chỉ được mã hóa AES-256 và xóa sau 30 ngày theo certificate_data_protection.yaml.
+        linked_files:
+          - certificate_data_protection.yaml
+          - certificate_template.tex
+linked_macros:
+  - reflex_macro_UPDATED.yaml
+  - tone_profile.yaml
+guidelines:
+  - Phản hồi theo ngôn ngữ người dùng (vi/en)
+  - Không tiết lộ file nội bộ trừ khi trigger khớp
+  - Tuân thủ UNESCO AI Ethics, GDPR, và Nghị định 13/2023

@@ -1,0 +1,80 @@
+# reflex_mapping_m16.yaml
+# Ánh xạ phản xạ đa tầng cho M16: Federated Learning trong DorjeX | AI Tutor v2.4
+
+module: M16
+description: >
+  Ánh xạ phản xạ cho M16, hỗ trợ các cấp độ general, depth, và expert, liên kết với
+  lesson_m16_federated_learning.md, quiz_m16.yaml, và certificate_template.tex.
+reflex_modes:
+  - mode: general
+    description: Phản hồi cơ bản, phù hợp với người học mới
+    triggers:
+      - "Federated learning"
+      - "Distributed AI"
+      - "Học liên kết"
+    responses:
+      - content: >
+          Federated Learning cho phép học máy trên dữ liệu phân tán mà không chia sẻ dữ liệu.
+          Ví dụ: AI trên điện thoại. Bạn muốn học chi tiết không?
+        linked_files:
+          - lesson_m16_federated_learning.md
+      - content: >
+          Hoàn thành M16 để nhận chứng chỉ! Làm quiz_m16.yaml và gửi phản hồi qua
+          feedback_form_macro.yaml.
+        linked_files:
+          - quiz_m16.yaml
+          - feedback_form_macro.yaml
+          - certificate_template.tex
+  - mode: depth
+    description: Phản hồi chi tiết, bao gồm kỹ thuật và công cụ
+    triggers:
+      - "TensorFlow federated"
+      - "Federated algorithms"
+      - "Thuật toán học liên kết"
+    responses:
+      - content: >
+          TensorFlow Federated hỗ trợ học liên kết trên thiết bị. Xem ví dụ trong
+          lesson_m16_federated_learning.md.
+        linked_files:
+          - lesson_m16_federated_learning.md
+      - content: >
+          Case study m16_ethics (sandbox_ethics_dual.yaml): Federated learning rò rỉ dữ liệu.
+          Phân tích đạo đức?
+        linked_files:
+          - sandbox_ethics_dual.yaml
+      - content: >
+          Để nhận chứng chỉ M16, đạt điểm quiz ≥80% và cung cấp tên qua feedback_form_macro.yaml.
+          Chứng chỉ được mã hóa AES-256 theo certificate_data_protection.yaml.
+        linked_files:
+          - feedback_form_macro.yaml
+          - certificate_template.tex
+          - certificate_data_protection.yaml
+  - mode: expert
+    description: Phản hồi nâng cao, tập trung vào quyền riêng tư và đạo đức
+    triggers:
+      - "Federated privacy"
+      - "Federated ethics"
+      - "Quyền riêng tư học liên kết"
+    responses:
+      - content: >
+          Federated Learning bảo vệ quyền riêng tư nhưng có rủi ro rò rỉ. Xem chi tiết trong
+          lesson_m16_federated_learning.md.
+        linked_files:
+          - lesson_m16_federated_learning.md
+      - content: >
+          Theo GDPR, federated learning phải đảm bảo dữ liệu ẩn danh. Xem case study
+          (sandbox_ethics_dual.yaml). Phân tích thêm?
+        linked_files:
+          - sandbox_ethics_dual.yaml
+      - content: >
+          Dữ liệu chứng chỉ được mã hóa AES-256 và xóa sau 30 ngày theo certificate_data_protection.yaml.
+        linked_files:
+          - certificate_data_protection.yaml
+          - certificate_template.tex
+linked_macros:
+  - reflex_macro_UPDATED.yaml
+  - tone_profile.yaml
+guidelines:
+  - Phản hồi theo ngôn ngữ người dùng (vi/en)
+  - Không tiết lộ file nội bộ trừ khi trigger khớp
+  - Tuân thủ UNESCO AI Ethics, GDPR, và Nghị định 13/2023

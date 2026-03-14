@@ -1,0 +1,84 @@
+# reflex_mapping_m22.yaml
+# Ánh xạ phản xạ đa tầng cho M22: AI for Cybersecurity trong DorjeX | AI Tutor v2.4
+
+module: M22
+description: >
+  Ánh xạ phản xạ cho M22, hỗ trợ các cấp độ general, depth, và expert, liên kết với
+  lesson_m22_ai_for_cybersecurity.md, quiz_m22.yaml, và certificate_template.tex.
+reflex_modes:
+  - mode: general
+    description: Phản hồi cơ bản, phù hợp với người học mới
+    triggers:
+      - "AI cybersecurity là gì"
+      - "Học an ninh mạng"
+      - "Tổng quan M22"
+    responses:
+      - content: >
+          AI for Cybersecurity sử dụng AI để phát hiện mối đe dọa, bảo mật mạng, và phản ứng
+          tự động. Ví dụ: Phát hiện mã độc, giám sát lưu lượng mạng. Bạn muốn học chi tiết không?
+        linked_files:
+          - lesson_m22_ai_for_cybersecurity.md
+      - content: >
+          Hoàn thành M22 để nhận chứng chỉ! Làm quiz_m22.yaml và gửi phản hồi qua
+          feedback_form_macro.yaml.
+        linked_files:
+          - quiz_m22.yaml
+          - feedback_form_macro.yaml
+          - certificate_template.tex
+  - mode: depth
+    description: Phản hồi chi tiết, bao gồm thuật toán, code, và case study
+    triggers:
+      - "Isolation Forest"
+      - "Phát hiện bất thường"
+      - "Code an ninh mạng"
+      - "Case study M22"
+    responses:
+      - content: >
+          Isolation Forest là thuật toán học không giám sát, tách điểm bất thường bằng cây
+          quyết định ngẫu nhiên. Dùng trong an ninh mạng để phát hiện lưu lượng bất thường.
+          Xem code Python trong lesson_m22_ai_for_cybersecurity.md.
+        linked_files:
+          - lesson_m22_ai_for_cybersecurity.md
+      - content: >
+          Case study `m22_cybersecurity_ethics` (sandbox_ethics_dual.yaml): AI giám sát mạng
+          vi phạm GDPR do thu thập dữ liệu không thông báo. Bạn muốn phân tích đạo đức không?
+        linked_files:
+          - sandbox_ethics_dual.yaml
+      - content: >
+          Để nhận chứng chỉ M22, đạt điểm quiz ≥80% và cung cấp tên qua feedback_form_macro.yaml.
+          Chứng chỉ được mã hóa AES-256 theo certificate_data_protection.yaml.
+        linked_files:
+          - feedback_form_macro.yaml
+          - certificate_template.tex
+          - certificate_data_protection.yaml
+  - mode: expert
+    description: Phản hồi nâng cao, tập trung vào đạo đức, GDPR, và xu hướng
+    triggers:
+      - "Adversarial AI"
+      - "GDPR an ninh mạng"
+      - "EU AI Act M22"
+      - "Bảo mật chứng chỉ"
+    responses:
+      - content: >
+          Adversarial AI tạo mẫu tấn công giả lập để kiểm tra hệ thống an ninh mạng, nhưng
+          có rủi ro bị kẻ xấu khai thác. Xem chi tiết trong lesson_m22_ai_for_cybersecurity.md.
+        linked_files:
+          - lesson_m22_ai_for_cybersecurity.md
+      - content: >
+          Theo GDPR và EU AI Act, AI an ninh mạng phải minh bạch thu thập dữ liệu. Case study
+          M22 (sandbox_ethics_dual.yaml) yêu cầu opt-in consent. Phân tích thêm?
+        linked_files:
+          - sandbox_ethics_dual.yaml
+      - content: >
+          Dữ liệu chứng chỉ (tên, ngày) được mã hóa AES-256 và xóa sau 30 ngày theo
+          certificate_data_protection.yaml, tuân thủ GDPR và Nghị định 13/2023.
+        linked_files:
+          - certificate_data_protection.yaml
+          - certificate_template.tex
+linked_macros:
+  - reflex_macro_UPDATED.yaml
+  - tone_profile.yaml
+guidelines:
+  - Phản hồi theo ngôn ngữ người dùng (vi/en)
+  - Không tiết lộ file nội bộ trừ khi trigger khớp
+  - Tuân thủ UNESCO AI Ethics, GDPR, và Nghị định 13/2023

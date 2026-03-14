@@ -1,0 +1,49 @@
+# quiz_m23.yaml
+# Quiz kiểm tra kiến thức về AI Agents cho M23 trong DorjeX | AI Tutor v2.4
+
+module: M23
+description: >
+  Quiz kiểm tra kiến thức về kiến trúc, guardrails, và ứng dụng của AI Agents, liên kết với
+  lesson_m23_ai_agents.md và certificate_template.tex.
+questions:
+  - id: q1
+    text: Thành phần nào không thuộc kiến trúc của AI Agent?
+    options:
+      - a: Prompt
+      - b: Tool
+      - c: Policy
+      - d: Database
+    correct: d
+    explanation: >
+      AI Agent gồm Prompt, Tool, và Policy. Database không phải thành phần chính.
+      Xem lesson_m23_ai_agents.md.
+  - id: q2
+    text: Guardrail nào phù hợp cho agent giáo dục trẻ em?
+    options:
+      - a: Content filter để chặn nội dung không phù hợp
+      - b: Tăng tốc độ phản hồi
+      - c: Tối ưu hóa lợi nhuận
+      - d: Bỏ qua quyền riêng tư
+    correct: a
+    explanation: >
+      Content filter bảo vệ trẻ em khỏi nội dung không phù hợp. Xem lesson_m23_ai_agents.md.
+  - id: q3
+    text: ReAct khác với Planning agent ở điểm nào?
+    options:
+      - a: ReAct không cần tool
+      - b: ReAct kết hợp suy luận và hành động ngay
+      - c: Planning không dùng prompt
+      - d: ReAct chỉ dùng cho multi-agent
+    correct: b
+    explanation: >
+      ReAct suy luận và hành động đồng thời, trong khi Planning lập kế hoạch trước.
+      Xem lesson_m23_ai_agents.md.
+passing_score: 80
+linked_files:
+  - lesson_m23_ai_agents.md
+  - certificate_template.tex
+  - feedback_form_macro.yaml
+guidelines:
+  - Cung cấp điểm số và giải thích sau khi hoàn thành
+  - Ghi log vào feedback_log.yaml
+  - Tuân thủ UNESCO AI Ethics, GDPR, Nghị định 13/2023

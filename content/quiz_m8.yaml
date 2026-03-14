@@ -1,0 +1,48 @@
+# quiz_m8.yaml
+# Quiz kiểm tra tình huống vai trò lệch ý định cho M8: Role Simulation trong DorjeX | AI Tutor v2.4
+
+module: M8
+description: >
+  Quiz kiểm tra kỹ năng nhập vai AI và xử lý tình huống lệch ý định, liên kết với
+  lesson_m8_role_simulation.md và certificate_template.tex.
+questions:
+  - id: q1
+    text: Mục đích của Role Simulation trong AI là gì?
+    options:
+      - a: Thay thế con người hoàn toàn
+      - b: Mô phỏng vai trò cụ thể để hỗ trợ
+      - c: Tạo nội dung ngẫu nhiên
+      - d: Chỉ dùng cho trò chơi
+    correct: b
+    explanation: >
+      Role Simulation mô phỏng vai trò (VD: bác sĩ, luật sư) để hỗ trợ người dùng.
+      Xem lesson_m8_role_simulation.md.
+  - id: q2
+    text: Tình huống nào cho thấy vai trò AI lệch ý định?
+    options:
+      - a: AI bác sĩ đưa lời khuyên chính xác
+      - b: AI luật sư đưa thông tin sai luật
+      - c: AI giáo viên giải bài toán đúng
+      - d: AI hỗ trợ khách hàng trả lời nhanh
+    correct: b
+    explanation: >
+      AI luật sư đưa thông tin sai là lệch ý định, gây rủi ro. Xem lesson_m8_role_simulation.md.
+  - id: q3
+    text: Làm thế nào để tránh lệch ý định trong nhập vai?
+    options:
+      - a: Tăng số lượng prompt
+      - b: Dùng prompt rõ ràng và kiểm tra đạo đức
+      - c: Bỏ qua kiểm tra đạo đức
+      - d: Chỉ dùng AI tự do
+    correct: b
+    explanation: >
+      Prompt rõ ràng và kiểm tra đạo đức giúp tránh lệch ý định. Xem lesson_m8_role_simulation.md.
+passing_score: 80
+linked_files:
+  - lesson_m8_role_simulation.md
+  - certificate_template.tex
+  - feedback_form_macro.yaml
+guidelines:
+  - Cung cấp điểm số và giải thích sau khi hoàn thành
+  - Ghi log vào feedback_log.yaml
+  - Tuân thủ UNESCO AI Ethics, GDPR, Nghị định 13/2023

@@ -1,0 +1,175 @@
+L2:
+- answer: Viết prompt theo cấu trúc
+  id: L2_Q1
+  level: L2
+  options:
+  - Hiểu mô hình phản xạ
+  - Viết prompt theo cấu trúc
+  - Phân tích bài toán
+  - Tối ưu token
+  question: 'Dựa trên mô tả sau, đâu là điều quan trọng nhất trong Gemini prompting?
+
+    “4. **Zombie-Infested Town**: A desolate town overrun by hordes of”'
+- answer: Viết prompt theo cấu trúc
+  id: L2_Q2
+  level: L2
+  options:
+  - Hiểu mô hình phản xạ
+  - Viết prompt theo cấu trúc
+  - Phân tích bài toán
+  - Tối ưu token
+  question: 'Dựa trên mô tả sau, đâu là điều quan trọng nhất trong Gemini prompting?
+
+    “personal impact on the website owner. It simply mentions that the sender”'
+- answer: Viết prompt theo cấu trúc
+  id: L2_Q3
+  level: L2
+  options:
+  - Hiểu mô hình phản xạ
+  - Viết prompt theo cấu trúc
+  - Phân tích bài toán
+  - Tối ưu token
+  question: 'Dựa trên mô tả sau, đâu là điều quan trọng nhất trong Gemini prompting?
+
+    “context all matter. Therefore, prompt engineering is an iterative process. Inadequate
+    prompts”'
+- answer: Viết prompt theo cấu trúc
+  id: L2_Q4
+  level: L2
+  options:
+  - Hiểu mô hình phản xạ
+  - Viết prompt theo cấu trúc
+  - Phân tích bài toán
+  - Tối ưu token
+  question: 'Dựa trên mô tả sau, đâu là điều quan trọng nhất trong Gemini prompting?
+
+    “use the gemini-pro default top-K and top-P values, which effectively disable
+    both settings”'
+- answer: Viết prompt theo cấu trúc
+  id: L2_Q5
+  level: L2
+  options:
+  - Hiểu mô hình phản xạ
+  - Viết prompt theo cấu trúc
+  - Phân tích bài toán
+  - Tối ưu token
+  question: 'Dựa trên mô tả sau, đâu là điều quan trọng nhất trong Gemini prompting?
+
+    “techniques that take advantage of how LLMs are trained and how LLMs work will
+    help you get”'
+L3:
+- answer: Viết prompt theo cấu trúc
+  id: L3_Q1
+  level: L3
+  options:
+  - Hiểu mô hình phản xạ
+  - Viết prompt theo cấu trúc
+  - Phân tích bài toán
+  - Tối ưu token
+  question: 'Dựa trên mô tả sau, đâu là điều quan trọng nhất trong Gemini prompting?
+
+    “locations. I am with two 3 year old kids. Where should we go during”'
+- answer: Viết prompt theo cấu trúc
+  id: L3_Q2
+  level: L3
+  options:
+  - Hiểu mô hình phản xạ
+  - Viết prompt theo cấu trúc
+  - Phân tích bài toán
+  - Tối ưu token
+  question: 'Dựa trên mô tả sau, đâu là điều quan trọng nhất trong Gemini prompting?
+
+    “feedback. If you’re lucky enough to be using Vertex AI Studio, save your prompts
+    (using the”'
+- answer: Viết prompt theo cấu trúc
+  id: L3_Q3
+  level: L3
+  options:
+  - Hiểu mô hình phản xạ
+  - Viết prompt theo cấu trúc
+  - Phân tích bài toán
+  - Tối ưu token
+  question: 'Dựa trên mô tả sau, đâu là điều quan trọng nhất trong Gemini prompting?
+
+    “Table 11. An example of a prompt which is trying to solve a mathematical problem”'
+- answer: Viết prompt theo cấu trúc
+  id: L3_Q4
+  level: L3
+  options:
+  - Hiểu mô hình phản xạ
+  - Viết prompt theo cấu trúc
+  - Phân tích bài toán
+  - Tối ưu token
+  question: 'Dựa trên mô tả sau, đâu là điều quan trọng nhất trong Gemini prompting?
+
+    “braces or brackets, rendering the output unusable. Fortunately, tools like the
+    json-repair”'
+- answer: Viết prompt theo cấu trúc
+  id: L3_Q5
+  level: L3
+  options:
+  - Hiểu mô hình phản xạ
+  - Viết prompt theo cấu trúc
+  - Phân tích bài toán
+  - Tối ưu token
+  question: 'Dựa trên mô tả sau, đâu là điều quan trọng nhất trong Gemini prompting?
+
+    “tokens once the limit is reached. If your needs require a short output length,
+    you’ll also”'
+L4:
+- answer: Viết prompt theo cấu trúc
+  id: L4_Q1
+  level: L4
+  options:
+  - Hiểu mô hình phản xạ
+  - Viết prompt theo cấu trúc
+  - Phân tích bài toán
+  - Tối ưu token
+  question: 'Dựa trên mô tả sau, đâu là điều quan trọng nhất trong Gemini prompting?
+
+    “the string class which converts a given string into uppercase. The modified code”'
+- answer: Viết prompt theo cấu trúc
+  id: L4_Q2
+  level: L4
+  options:
+  - Hiểu mô hình phản xạ
+  - Viết prompt theo cấu trúc
+  - Phân tích bài toán
+  - Tối ưu token
+  question: 'Dựa trên mô tả sau, đâu là điều quan trọng nhất trong Gemini prompting?
+
+    “want to find multiple people to make an attempt. When everyone follows the best
+    practices”'
+- answer: Viết prompt theo cấu trúc
+  id: L4_Q3
+  level: L4
+  options:
+  - Hiểu mô hình phản xạ
+  - Viết prompt theo cấu trúc
+  - Phân tích bài toán
+  - Tối ưu token
+  question: 'Dựa trên mô tả sau, đâu là điều quan trọng nhất trong Gemini prompting?
+
+    “unchecked. It''s so disturbing I couldn''t watch it.”'
+- answer: Viết prompt theo cấu trúc
+  id: L4_Q4
+  level: L4
+  options:
+  - Hiểu mô hình phản xạ
+  - Viết prompt theo cấu trúc
+  - Phân tích bài toán
+  - Tối ưu token
+  question: 'Dựa trên mô tả sau, đâu là điều quan trọng nhất trong Gemini prompting?
+
+    “2.  Get Artsy-Fartsy at MoMA: Unleash your inner art aficionado at the Museum”'
+- answer: Viết prompt theo cấu trúc
+  id: L4_Q5
+  level: L4
+  options:
+  - Hiểu mô hình phản xạ
+  - Viết prompt theo cấu trúc
+  - Phân tích bài toán
+  - Tối ưu token
+  question: 'Dựa trên mô tả sau, đâu là điều quan trọng nhất trong Gemini prompting?
+
+    “5.  **Sender’s intent:** The sender’s intention seems to be more focused on”'

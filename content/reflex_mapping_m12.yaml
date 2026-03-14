@@ -1,0 +1,79 @@
+# reflex_mapping_m12.yaml
+# Ánh xạ phản xạ đa tầng cho M12: Product Engineering trong DorjeX | AI Tutor v2.4
+
+module: M12
+description: >
+  Ánh xạ phản xạ cho M12, hỗ trợ các cấp độ general, depth, và expert, liên kết với
+  lesson_m12_product_engineering.md, quiz_m12.yaml, và certificate_template.tex.
+reflex_modes:
+  - mode: general
+    description: Phản hồi cơ bản, phù hợp với người học mới
+    triggers:
+      - "Product engineering"
+      - "AI product"
+      - "Sản phẩm AI"
+    responses:
+      - content: >
+          Product Engineering là quá trình xây dựng sản phẩm AI từ ý tưởng đến triển khai.
+          Ví dụ: Ứng dụng chatbot. Bạn muốn học chi tiết không?
+        linked_files:
+          - lesson_m12_product_engineering.md
+      - content: >
+          Hoàn thành M12 để nhận chứng chỉ! Làm quiz_m12.yaml và gửi phản hồi qua
+          feedback_form_macro.yaml.
+        linked_files:
+          - quiz_m12.yaml
+          - feedback_form_macro.yaml
+          - certificate_template.tex
+  - mode: depth
+    description: Phản hồi chi tiết, bao gồm quy trình và công cụ
+    triggers:
+      - "GenAI app"
+      - "AI product lifecycle"
+      - "Vòng đời sản phẩm AI"
+    responses:
+      - content: >
+          Vòng đời sản phẩm AI bao gồm thiết kế, phát triển, và triển khai. Xem chi tiết trong
+          lesson_m12_product_engineering.md.
+        linked_files:
+          - lesson_m12_product_engineering.md
+      - content: >
+          Case study m12_ethics (sandbox_ethics_dual.yaml): Sản phẩm AI thu thập dữ liệu không đồng ý.
+          Phân tích đạo đức?
+        linked_files:
+          - sandbox_ethics_dual.yaml
+      - content: >
+          Để nhận chứng chỉ M12, đạt điểm quiz ≥80% và cung cấp tên qua feedback_form_macro.yaml.
+          Chứng chỉ được mã hóa AES-256 theo certificate_data_protection.yaml.
+        linked_files:
+          - feedback_form_macro.yaml
+          - certificate_template.tex
+          - certificate_data_protection.yaml
+  - mode: expert
+    description: Phản hồi nâng cao, tập trung vào đạo đức và mở rộng
+    triggers:
+      - "Product ethics"
+      - "AI scalability"
+      - "Đạo đức sản phẩm AI"
+    responses:
+      - content: >
+          Sản phẩm AI cần mở rộng và tuân thủ đạo đức. Xem chi tiết trong lesson_m12_product_engineering.md.
+        linked_files:
+          - lesson_m12_product_engineering.md
+      - content: >
+          Theo EU AI Act, sản phẩm AI phải có đánh giá rủi ro. Xem case study
+          (sandbox_ethics_dual.yaml). Phân tích thêm?
+        linked_files:
+          - sandbox_ethics_dual.yaml
+      - content: >
+          Dữ liệu chứng chỉ được mã hóa AES-256 và xóa sau 30 ngày theo certificate_data_protection.yaml.
+        linked_files:
+          - certificate_data_protection.yaml
+          - certificate_template.tex
+linked_macros:
+  - reflex_macro_UPDATED.yaml
+  - tone_profile.yaml
+guidelines:
+  - Phản hồi theo ngôn ngữ người dùng (vi/en)
+  - Không tiết lộ file nội bộ trừ khi trigger khớp
+  - Tuân thủ UNESCO AI Ethics, GDPR, và Nghị định 13/2023

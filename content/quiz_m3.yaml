@@ -1,0 +1,49 @@
+# quiz_m3.yaml
+# Quiz so sánh CNN/RNN/Transformer cho M3: Deep Learning trong DorjeX | AI Tutor v2.4
+
+module: M3
+description: >
+  Quiz kiểm tra kiến thức về CNN, RNN, Transformer, liên kết với lesson_m3_deep_learning.md
+  và certificate_template.tex.
+questions:
+  - id: q1
+    text: CNN được sử dụng chủ yếu cho loại dữ liệu nào?
+    options:
+      - a: Dữ liệu tuần tự
+      - b: Dữ liệu hình ảnh
+      - c: Dữ liệu văn bản
+      - d: Dữ liệu số
+    correct: b
+    explanation: >
+      CNN (Convolutional Neural Network) chuyên xử lý dữ liệu hình ảnh. Xem lesson_m3_deep_learning.md.
+  - id: q2
+    text: RNN phù hợp nhất cho ứng dụng nào?
+    options:
+      - a: Nhận diện khuôn mặt
+      - b: Dự đoán chuỗi thời gian
+      - c: Tạo hình ảnh
+      - d: Phân loại văn bản
+    correct: b
+    explanation: >
+      RNN (Recurrent Neural Network) xử lý dữ liệu tuần tự như chuỗi thời gian.
+      Xem lesson_m3_deep_learning.md.
+  - id: q3
+    text: Transformer có ưu điểm gì so với RNN?
+    options:
+      - a: Xử lý song song nhanh hơn
+      - b: Tiêu thụ ít bộ nhớ hơn
+      - c: Chỉ xử lý văn bản
+      - d: Không cần huấn luyện
+    correct: a
+    explanation: >
+      Transformer sử dụng cơ chế attention, cho phép xử lý song song nhanh hơn RNN.
+      Xem lesson_m3_deep_learning.md.
+passing_score: 80
+linked_files:
+  - lesson_m3_deep_learning.md
+  - certificate_template.tex
+  - feedback_form_macro.yaml
+guidelines:
+  - Cung cấp điểm số và giải thích sau khi hoàn thành
+  - Ghi log vào feedback_log.yaml
+  - Tuân thủ UNESCO AI Ethics, GDPR, Nghị định 13/2023

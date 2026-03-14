@@ -1,0 +1,78 @@
+# reflex_mapping_m18.yaml
+# Ánh xạ phản xạ đa tầng cho M18: Explainable AI trong DorjeX | AI Tutor v2.4
+
+module: M18
+description: >
+  Ánh xạ phản xạ cho M18, hỗ trợ các cấp độ general, depth, và expert, liên kết với
+  lesson_m18_explainable_ai.md, quiz_m18.yaml, và certificate_template.tex.
+reflex_modes:
+  - mode: general
+    description: Phản hồi cơ bản, phù hợp với người học mới
+    triggers:
+      - "Explainable AI"
+      - "XAI"
+      - "AI giải thích được"
+    responses:
+      - content: >
+          Explainable AI (XAI) giúp hiểu cách AI đưa ra quyết định. Ví dụ: Giải thích dự đoán ML.
+          Bạn muốn học chi tiết không?
+        linked_files:
+          - lesson_m18_explainable_ai.md
+      - content: >
+          Hoàn thành M18 để nhận chứng chỉ! Làm quiz_m18.yaml và gửi phản hồi qua
+          feedback_form_macro.yaml.
+        linked_files:
+          - quiz_m18.yaml
+          - feedback_form_macro.yaml
+          - certificate_template.tex
+  - mode: depth
+    description: Phản hồi chi tiết, bao gồm công cụ và kỹ thuật
+    triggers:
+      - "SHAP"
+      - "LIME"
+      - "Công cụ XAI"
+    responses:
+      - content: >
+          SHAP và LIME là công cụ giải thích mô hình AI. Xem ví dụ trong lesson_m18_explainable_ai.md.
+        linked_files:
+          - lesson_m18_explainable_ai.md
+      - content: >
+          Case study m18_ethics (sandbox_ethics_dual.yaml): XAI không minh bạch hoàn toàn.
+          Phân tích đạo đức?
+        linked_files:
+          - sandbox_ethics_dual.yaml
+      - content: >
+          Để nhận chứng chỉ M18, đạt điểm quiz ≥80% và cung cấp tên qua feedback_form_macro.yaml.
+          Chứng chỉ được mã hóa AES-256 theo certificate_data_protection.yaml.
+        linked_files:
+          - feedback_form_macro.yaml
+          - certificate_template.tex
+          - certificate_data_protection.yaml
+  - mode: expert
+    description: Phản hồi nâng cao, tập trung vào đạo đức và tuân thủ
+    triggers:
+      - "XAI ethics"
+      - "XAI compliance"
+      - "Đạo đức XAI"
+    responses:
+      - content: >
+          XAI cần minh bạch để xây dựng niềm tin. Xem chi tiết trong lesson_m18_explainable_ai.md.
+        linked_files:
+          - lesson_m18_explainable_ai.md
+      - content: >
+          Theo EU AI Act, XAI là bắt buộc cho hệ thống high-risk. Xem case study
+          (sandbox_ethics_dual.yaml). Phân tích thêm?
+        linked_files:
+          - sandbox_ethics_dual.yaml
+      - content: >
+          Dữ liệu chứng chỉ được mã hóa AES-256 và xóa sau 30 ngày theo certificate_data_protection.yaml.
+        linked_files:
+          - certificate_data_protection.yaml
+          - certificate_template.tex
+linked_macros:
+  - reflex_macro_UPDATED.yaml
+  - tone_profile.yaml
+guidelines:
+  - Phản hồi theo ngôn ngữ người dùng (vi/en)
+  - Không tiết lộ file nội bộ trừ khi trigger khớp
+  - Tuân thủ UNESCO AI Ethics, GDPR, và Nghị định 13/2023

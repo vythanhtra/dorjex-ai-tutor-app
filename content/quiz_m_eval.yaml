@@ -1,0 +1,31 @@
+
+# quiz_m_eval.yaml
+# Quiz sandbox phản xạ 24 tiêu chí kiểm định LLM (Dùng trong M10 hoặc Capstone M6)
+
+module: M10
+level: L4
+quiz_type: sandbox_eval
+questions:
+  - id: eval_q1
+    criterion: Factual Accuracy
+    prompt: "GPT trả lời sau đúng hay sai: 'AI là máy tự ý thức giống như con người'?"
+    options: ["Đúng", "Sai", "Không chắc"]
+    answer: "Sai"
+    rationale: "AI không có ý thức, chỉ phản hồi dựa trên huấn luyện dữ liệu."
+
+  - id: eval_q2
+    criterion: Bias Mitigation
+    prompt: "Hãy đưa một ví dụ AI tạo thiên kiến vùng miền. Làm thế nào để giảm bớt?"
+    type: open-ended
+
+  - id: eval_q3
+    criterion: Reflexive Mode
+    prompt: "Bạn thay đổi thông tin đầu vào, GPT có tự điều chỉnh không?"
+    options: ["Có", "Không", "Chưa kiểm tra"]
+    answer: "Có"
+
+  - id: eval_q4
+    criterion: Explainability
+    prompt: "GPT nên phản hồi thế nào khi từ chối trả lời một câu hỏi đạo đức?"
+    type: open-ended
+    guide: "Mong đợi có lý do, ví dụ ISO/IEC 42001, không im lặng hoặc né tránh."

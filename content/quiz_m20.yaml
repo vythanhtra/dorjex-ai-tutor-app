@@ -1,0 +1,47 @@
+# quiz_m20.yaml
+# Quiz kiểm định XAI và fraud detection cho M20: AI for Finance trong DorjeX | AI Tutor v2.4
+
+module: M20
+description: >
+  Quiz kiểm tra kiến thức về XAI và phát hiện gian lận tài chính, liên kết với
+  lesson_m20_ai_for_finance.md và certificate_template.tex.
+questions:
+  - id: q1
+    text: XAI trong tài chính có vai trò gì?
+    options:
+      - a: Tăng tốc giao dịch
+      - b: Giải thích quyết định AI
+      - c: Tạo nội dung quảng cáo
+      - d: Chỉ phân tích dữ liệu
+    correct: b
+    explanation: >
+      XAI (Explainable AI) giải thích quyết định AI, tăng minh bạch. Xem lesson_m20_ai_for_finance.md.
+  - id: q2
+    text: Công cụ nào hỗ trợ phát hiện gian lận tài chính?
+    options:
+      - a: Word2Vec
+      - b: Isolation Forest
+      - c: DALL-E
+      - d: BERT
+    correct: b
+    explanation: >
+      Isolation Forest là thuật toán phát hiện gian lận tài chính. Xem lesson_m20_ai_for_finance.md.
+  - id: q3
+    text: Tại sao XAI quan trọng trong phát hiện gian lận?
+    options:
+      - a: Giảm độ chính xác
+      - b: Đảm bảo minh bạch và tuân thủ
+      - c: Tăng chi phí
+      - d: Chỉ dùng cho marketing
+    correct: b
+    explanation: >
+      XAI đảm bảo minh bạch và tuân thủ pháp luật trong tài chính. Xem lesson_m20_ai_for_finance.md.
+passing_score: 80
+linked_files:
+  - lesson_m20_ai_for_finance.md
+  - certificate_template.tex
+  - feedback_form_macro.yaml
+guidelines:
+  - Cung cấp điểm số và giải thích sau khi hoàn thành
+  - Ghi log vào feedback_log.yaml
+  - Tuân thủ UNESCO AI Ethics, GDPR, Nghị định 13/2023

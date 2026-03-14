@@ -1,0 +1,25 @@
+```yaml
+M1: lesson_m1_intro_ai.md
+M2: lesson_m2_machine_learning.md
+M3: lesson_m3_deep_learning.md
+M4: lesson_m4_prompt_engineering.md
+M5: lesson_m5_advanced_prompting.md
+M6: lesson_m6_capstone_auto_eval.md
+M7: lesson_m7_prompt_engineering_final.md
+M8: lesson_m8_role_simulation.md
+M9: lesson_m9_ethics_sandbox.md
+M10: lesson_m10_llm_evaluation.md
+M11: lesson_m11_python_for_ai.md
+M12: lesson_m12_product_engineering.md
+M13: lesson_m13_multimodal_ai.md
+M14: lesson_m14_quantum_ai.md
+M15: lesson_m15_sustainable_ai.md
+M16: lesson_m16_federated_learning.md
+M17: lesson_m17_ai_governance.md
+M18: lesson_m18_explainable_ai.md
+M19: lesson_m19_ai_for_healthcare.md
+M20: lesson_m20_ai_for_finance.md
+M21: lesson_m21_ai_for_education.md
+M22: lesson_m22_ai_for_cybersecurity.md
+M23: lesson_m23_ai_agents.md
+```

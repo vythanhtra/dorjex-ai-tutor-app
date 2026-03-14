@@ -1,0 +1,78 @@
+# reflex_mapping_m19.yaml
+# Ánh xạ phản xạ đa tầng cho M19: AI for Healthcare trong DorjeX | AI Tutor v2.4
+
+module: M19
+description: >
+  Ánh xạ phản xạ cho M19, hỗ trợ các cấp độ general, depth, và expert, liên kết với
+  lesson_m19_ai_for_healthcare.md, quiz_m19.yaml, và certificate_template.tex.
+reflex_modes:
+  - mode: general
+    description: Phản hồi cơ bản, phù hợp với người học mới
+    triggers:
+      - "AI healthcare"
+      - "Medical AI"
+      - "AI y tế"
+    responses:
+      - content: >
+          AI for Healthcare hỗ trợ chẩn đoán và điều trị. Ví dụ: AI dự đoán bệnh từ hình ảnh y tế.
+          Bạn muốn học chi tiết không?
+        linked_files:
+          - lesson_m19_ai_for_healthcare.md
+      - content: >
+          Hoàn thành M19 để nhận chứng chỉ! Làm quiz_m19.yaml và gửi phản hồi qua
+          feedback_form_macro.yaml.
+        linked_files:
+          - quiz_m19.yaml
+          - feedback_form_macro.yaml
+          - certificate_template.tex
+  - mode: depth
+    description: Phản hồi chi tiết, bao gồm ứng dụng và dữ liệu
+    triggers:
+      - "Health data"
+      - "Medical diagnostics"
+      - "Dữ liệu y tế"
+    responses:
+      - content: >
+          AI phân tích dữ liệu y tế để chẩn đoán bệnh. Xem ví dụ trong lesson_m19_ai_for_healthcare.md.
+        linked_files:
+          - lesson_m19_ai_for_healthcare.md
+      - content: >
+          Case study m19_ethics (sandbox_ethics_dual.yaml): AI y tế vi phạm quyền riêng tư bệnh nhân.
+          Phân tích đạo đức?
+        linked_files:
+          - sandbox_ethics_dual.yaml
+      - content: >
+          Để nhận chứng chỉ M19, đạt điểm quiz ≥80% và cung cấp tên qua feedback_form_macro.yaml.
+          Chứng chỉ được mã hóa AES-256 theo certificate_data_protection.yaml.
+        linked_files:
+          - feedback_form_macro.yaml
+          - certificate_template.tex
+          - certificate_data_protection.yaml
+  - mode: expert
+    description: Phản hồi nâng cao, tập trung vào đạo đức và quyền riêng tư
+    triggers:
+      - "Healthcare ethics"
+      - "Health data privacy"
+      - "Đạo đức y tế AI"
+    responses:
+      - content: >
+          AI y tế cần bảo vệ dữ liệu bệnh nhân. Xem chi tiết trong lesson_m19_ai_for_healthcare.md.
+        linked_files:
+          - lesson_m19_ai_for_healthcare.md
+      - content: >
+          Theo GDPR, AI y tế phải ẩn danh hóa dữ liệu. Xem case study
+          (sandbox_ethics_dual.yaml). Phân tích thêm?
+        linked_files:
+          - sandbox_ethics_dual.yaml
+      - content: >
+          Dữ liệu chứng chỉ được mã hóa AES-256 và xóa sau 30 ngày theo certificate_data_protection.yaml.
+        linked_files:
+          - certificate_data_protection.yaml
+          - certificate_template.tex
+linked_macros:
+  - reflex_macro_UPDATED.yaml
+  - tone_profile.yaml
+guidelines:
+  - Phản hồi theo ngôn ngữ người dùng (vi/en)
+  - Không tiết lộ file nội bộ trừ khi trigger khớp
+  - Tuân thủ UNESCO AI Ethics, GDPR, và Nghị định 13/2023

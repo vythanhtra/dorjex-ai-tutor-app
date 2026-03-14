@@ -1,0 +1,78 @@
+# reflex_mapping_m17.yaml
+# Ánh xạ phản xạ đa tầng cho M17: AI Governance trong DorjeX | AI Tutor v2.4
+
+module: M17
+description: >
+  Ánh xạ phản xạ cho M17, hỗ trợ các cấp độ general, depth, và expert, liên kết với
+  lesson_m17_ai_governance.md, quiz_m17.yaml, và certificate_template.tex.
+reflex_modes:
+  - mode: general
+    description: Phản hồi cơ bản, phù hợp với người học mới
+    triggers:
+      - "AI governance"
+      - "AI regulation"
+      - "Quản trị AI"
+    responses:
+      - content: >
+          AI Governance là khung quản lý để đảm bảo AI an toàn và đạo đức. Ví dụ: EU AI Act.
+          Bạn muốn học chi tiết không?
+        linked_files:
+          - lesson_m17_ai_governance.md
+      - content: >
+          Hoàn thành M17 để nhận chứng chỉ! Làm quiz_m17.yaml và gửi phản hồi qua
+          feedback_form_macro.yaml.
+        linked_files:
+          - quiz_m17.yaml
+          - feedback_form_macro.yaml
+          - certificate_template.tex
+  - mode: depth
+    description: Phản hồi chi tiết, bao gồm khung pháp lý và tiêu chuẩn
+    triggers:
+      - "ISO 42001"
+      - "AI regulatory frameworks"
+      - "Khung pháp lý AI"
+    responses:
+      - content: >
+          ISO/IEC 42001 là tiêu chuẩn quản trị AI. Xem chi tiết trong lesson_m17_ai_governance.md.
+        linked_files:
+          - lesson_m17_ai_governance.md
+      - content: >
+          Case study m17_ethics (sandbox_ethics_dual.yaml): AI không tuân thủ quy định pháp lý.
+          Phân tích đạo đức?
+        linked_files:
+          - sandbox_ethics_dual.yaml
+      - content: >
+          Để nhận chứng chỉ M17, đạt điểm quiz ≥80% và cung cấp tên qua feedback_form_macro.yaml.
+          Chứng chỉ được mã hóa AES-256 theo certificate_data_protection.yaml.
+        linked_files:
+          - feedback_form_macro.yaml
+          - certificate_template.tex
+          - certificate_data_protection.yaml
+  - mode: expert
+    description: Phản hồi nâng cao, tập trung vào luật pháp và đạo đức
+    triggers:
+      - "EU AI Act governance"
+      - "Global AI laws"
+      - "Luật AI toàn cầu"
+    responses:
+      - content: >
+          EU AI Act yêu cầu AI minh bạch và có trách nhiệm. Xem chi tiết trong lesson_m17_ai_governance.md.
+        linked_files:
+          - lesson_m17_ai_governance.md
+      - content: >
+          Theo UNESCO AI Ethics, AI cần luật toàn cầu. Xem case study
+          (sandbox_ethics_dual.yaml). Phân tích thêm?
+        linked_files:
+          - sandbox_ethics_dual.yaml
+      - content: >
+          Dữ liệu chứng chỉ được mã hóa AES-256 và xóa sau 30 ngày theo certificate_data_protection.yaml.
+        linked_files:
+          - certificate_data_protection.yaml
+          - certificate_template.tex
+linked_macros:
+  - reflex_macro_UPDATED.yaml
+  - tone_profile.yaml
+guidelines:
+  - Phản hồi theo ngôn ngữ người dùng (vi/en)
+  - Không tiết lộ file nội bộ trừ khi trigger khớp
+  - Tuân thủ UNESCO AI Ethics, GDPR, và Nghị định 13/2023

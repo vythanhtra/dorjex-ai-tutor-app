@@ -1,0 +1,79 @@
+# reflex_mapping_m1.yaml
+# Ánh xạ phản xạ đa tầng cho M1: Intro to AI trong DorjeX | AI Tutor v2.4
+
+module: M1
+description: >
+  Ánh xạ phản xạ cho M1, hỗ trợ các cấp độ general, depth, và expert, liên kết với
+  lesson_m1_intro_ai.md, quiz_m1.yaml, và certificate_template.tex.
+reflex_modes:
+  - mode: general
+    description: Phản hồi cơ bản, phù hợp với người học mới
+    triggers:
+      - "AI là gì"
+      - "Intro AI"
+      - "Trí tuệ nhân tạo"
+    responses:
+      - content: >
+          Trí tuệ nhân tạo (AI) là lĩnh vực mô phỏng trí thông minh con người bằng máy tính.
+          Ví dụ: Chatbot, xe tự lái. Bạn muốn học chi tiết không?
+        linked_files:
+          - lesson_m1_intro_ai.md
+      - content: >
+          Hoàn thành M1 để nhận chứng chỉ! Làm quiz_m1.yaml và gửi phản hồi qua
+          feedback_form_macro.yaml.
+        linked_files:
+          - quiz_m1.yaml
+          - feedback_form_macro.yaml
+          - certificate_template.tex
+  - mode: depth
+    description: Phản hồi chi tiết, bao gồm lịch sử và khái niệm
+    triggers:
+      - "AI history"
+      - "Turing test"
+      - "Lịch sử AI"
+    responses:
+      - content: >
+          Lịch sử AI bắt đầu từ Turing Test (1950), kiểm tra máy có thể “suy nghĩ” như người.
+          Xem chi tiết trong lesson_m1_intro_ai.md.
+        linked_files:
+          - lesson_m1_intro_ai.md
+      - content: >
+          Case study m1_ethics (sandbox_ethics_dual.yaml): AI chatbot thu thập dữ liệu
+          mà không xin phép. Phân tích đạo đức?
+        linked_files:
+          - sandbox_ethics_dual.yaml
+      - content: >
+          Để nhận chứng chỉ M1, đạt điểm quiz ≥80% và cung cấp tên qua feedback_form_macro.yaml.
+          Chứng chỉ được mã hóa AES-256 theo certificate_data_protection.yaml.
+        linked_files:
+          - feedback_form_macro.yaml
+          - certificate_template.tex
+          - certificate_data_protection.yaml
+  - mode: expert
+    description: Phản hồi nâng cao, tập trung vào đạo đức và quản trị
+    triggers:
+      - "AI ethics M1"
+      - "AI governance"
+      - "Đạo đức AI M1"
+    responses:
+      - content: >
+          Quản trị AI yêu cầu minh bạch và trách nhiệm. Xem chi tiết trong lesson_m1_intro_ai.md.
+        linked_files:
+          - lesson_m1_intro_ai.md
+      - content: >
+          Theo GDPR/EU AI Act, AI phải thông báo thu thập dữ liệu. Xem case study
+          (sandbox_ethics_dual.yaml). Phân tích thêm?
+        linked_files:
+          - sandbox_ethics_dual.yaml
+      - content: >
+          Dữ liệu chứng chỉ được mã hóa AES-256 và xóa sau 30 ngày theo certificate_data_protection.yaml.
+        linked_files:
+          - certificate_data_protection.yaml
+          - certificate_template.tex
+linked_macros:
+  - reflex_macro_UPDATED.yaml
+  - tone_profile.yaml
+guidelines:
+  - Phản hồi theo ngôn ngữ người dùng (vi/en)
+  - Không tiết lộ file nội bộ trừ khi trigger khớp
+  - Tuân thủ UNESCO AI Ethics, GDPR, và Nghị định 13/2023
