@@ -1,22 +1,33 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-import os
+from app.core.config import settings
+from app.database import Base, engine
+from app.routers import auth, modules, lessons, progress, quizzes, chat
+
+# Create tables
+Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
     title="DorjeX AI Tutor API",
-    description="Backend API for DorjeX AI Tutor - AI-powered learning platform",
+    description="Backend API for DorjeX AI Tutor — AI-powered learning platform with 23 modules",
     version="1.0.0",
 )
 
-# CORS
-origins = os.getenv("CORS_ORIGINS", "http://localhost:3000").split(",")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=settings.cors_origins_list,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Routers
+app.include_router(auth.router, prefix="/api")
+app.include_router(modules.router, prefix="/api")
+app.include_router(lessons.router, prefix="/api")
+app.include_router(progress.router, prefix="/api")
+app.include_router(quizzes.router, prefix="/api")
+app.include_router(chat.router, prefix="/api")
 
 
 @app.get("/health")

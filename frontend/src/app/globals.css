@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body { @apply antialiased; }
+}
+
+.prose pre {
+  @apply bg-gray-900 text-gray-100 rounded-xl p-4 overflow-x-auto text-sm;
+}
+.prose code:not(pre code) {
+  @apply bg-gray-100 text-gray-800 rounded px-1.5 py-0.5 text-sm font-mono;
+}
+.prose table { @apply w-full border-collapse text-sm; }
+.prose th { @apply bg-gray-50 border border-gray-200 px-3 py-2 font-semibold text-left; }
+.prose td { @apply border border-gray-200 px-3 py-2; }
