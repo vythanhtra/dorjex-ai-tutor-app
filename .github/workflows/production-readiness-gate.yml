@@ -1,0 +1,95 @@
+name: Production Readiness Gate
+
+on:
+  push:
+    branches: [main, master, "claude/*"]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  readiness-check:
+    name: Deployment Readiness Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Production Readiness Checks
+        id: checks
+        run: |
+          echo "## Production Readiness Report" >> $GITHUB_STEP_SUMMARY
+          echo "**Date:** $(date -u '+%Y-%m-%d %H:%M UTC')" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Category | Check | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "|----------|-------|--------|" >> $GITHUB_STEP_SUMMARY
+
+          PASS=0
+          FAIL=0
+
+          check() {
+            local category="$1"
+            local description="$2"
+            local condition="$3"
+            if eval "$condition"; then
+              echo "| $category | $description | ✅ PASS |" >> $GITHUB_STEP_SUMMARY
+              PASS=$((PASS + 1))
+            else
+              echo "| $category | $description | ❌ FAIL |" >> $GITHUB_STEP_SUMMARY
+              FAIL=$((FAIL + 1))
+            fi
+          }
+
+          # Frontend checks
+          check "Frontend" "package.json exists" "[ -f frontend/package.json ]"
+          check "Frontend" ".env.example exists" "[ -f frontend/.env.example ]"
+          check "Frontend" "Dockerfile exists" "[ -f frontend/Dockerfile ]"
+          check "Frontend" "next.config.js exists" "[ -f frontend/next.config.js ]"
+          check "Frontend" "src/app directory exists" "[ -d frontend/src/app ]"
+
+          # Backend checks
+          check "Backend" "requirements.txt exists" "[ -f backend/requirements.txt ]"
+          check "Backend" ".env.example exists" "[ -f backend/.env.example ]"
+          check "Backend" "Dockerfile exists" "[ -f backend/Dockerfile ]"
+          check "Backend" "app/main.py exists" "[ -f backend/app/main.py ]"
+
+          # Infrastructure checks
+          check "Infrastructure" "docker-compose.yml exists" "[ -f docker-compose.yml ]"
+          check "Infrastructure" "vercel.json exists" "[ -f vercel.json ]"
+          check "Infrastructure" "render.yaml exists" "[ -f render.yaml ]"
+          check "Infrastructure" ".gitignore exists" "[ -f .gitignore ]"
+
+          # CI/CD checks
+          check "CI/CD" "ci.yml workflow exists" "[ -f .github/workflows/ci.yml ]"
+          check "CI/CD" "deploy.yml workflow exists" "[ -f .github/workflows/deploy.yml ]"
+
+          # Documentation checks
+          check "Docs" "README.md exists" "[ -f README.md ]"
+          check "Docs" "DEPLOYMENT.md exists" "[ -f DEPLOYMENT.md ]"
+
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Summary" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Passed: **$PASS**" >> $GITHUB_STEP_SUMMARY
+          echo "- ❌ Failed: **$FAIL**" >> $GITHUB_STEP_SUMMARY
+          TOTAL=$((PASS + FAIL))
+          SCORE=$((PASS * 100 / TOTAL))
+          echo "- Score: **$SCORE%** ($PASS/$TOTAL)" >> $GITHUB_STEP_SUMMARY
+
+          if [ $FAIL -gt 0 ]; then
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "> ⚠️ **Not ready for production deployment.** Fix the FAIL items above." >> $GITHUB_STEP_SUMMARY
+          else
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "> ✅ **All checks passed! Repository is deployment-ready.**" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          echo "pass=$PASS" >> $GITHUB_OUTPUT
+          echo "fail=$FAIL" >> $GITHUB_OUTPUT
+          echo "score=$SCORE" >> $GITHUB_OUTPUT
+
+      - name: Print Summary to Console
+        run: |
+          echo "Readiness Score: ${{ steps.checks.outputs.score }}%"
+          echo "Passed: ${{ steps.checks.outputs.pass }}"
+          echo "Failed: ${{ steps.checks.outputs.fail }}"
