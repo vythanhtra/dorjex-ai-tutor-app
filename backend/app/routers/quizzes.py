@@ -10,7 +10,11 @@ router = APIRouter(prefix="/quizzes", tags=["quizzes"])
 
 
 @router.get("/module/{module_id}", response_model=QuizResponse)
-def get_quiz_by_module(module_id: str, db: Session = Depends(get_db)):
+def get_quiz_by_module(
+    module_id: str,
+    _: str = Depends(get_current_user_id),  # require auth; correct_answer NOT in QuizResponse
+    db: Session = Depends(get_db),
+):
     quiz = db.query(Quiz).options(joinedload(Quiz.questions)).filter(Quiz.module_id == module_id).first()
     if not quiz:
         raise HTTPException(status_code=404, detail="Quiz not found for this module")

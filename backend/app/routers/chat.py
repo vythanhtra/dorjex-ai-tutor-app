@@ -81,8 +81,9 @@ async def _call_openai(message: str, history: list, module_id: str | None, db: S
             temperature=0.7,
         )
         return response.choices[0].message.content
-    except Exception as e:
-        return f"Sorry, I encountered an error: {str(e)}"
+    except Exception:
+        # Never expose internal error details to client
+        return "Sorry, AI Tutor is temporarily unavailable. Please try again later."
 
 
 @router.get("/history/{conversation_id}", response_model=ChatResponse)
